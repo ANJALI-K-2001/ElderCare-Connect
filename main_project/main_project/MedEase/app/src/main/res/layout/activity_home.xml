@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/homepageone"
+    tools:context=".Home">
+
+<!--    <Button-->
+<!--        android:id="@+id/button7"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="View Diseases"-->
+<!--        tools:layout_editor_absoluteX="195dp"-->
+<!--        tools:layout_editor_absoluteY="173dp" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/button4"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Send Enquiry" />-->
+
+
+<!--    <Button-->
+<!--        android:id="@+id/button5"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="View doctors" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/button6"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Upload Image" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/button11"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="view appointment" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/meddet"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Add Medicine Details" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/button8"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Logout" />-->
+
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="406dp"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical"
+        android:padding="6dp">
+
+
+        <TableRow
+            android:layout_width="350dp"
+            android:layout_height="157dp"
+            android:gravity="center"
+            android:padding="20dp">
+
+
+            <LinearLayout
+                android:layout_width="105dp"
+                android:layout_height="115dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/viewusers"
+                    android:layout_width="45dp"
+                    android:layout_height="46dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/viewuser"
+                    app:srcCompat="@drawable/viewuser" />
+
+                <TextView
+                    android:id="@+id/textviewusers"
+                    android:layout_width="110dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="View Users"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="105dp"
+                android:layout_height="115dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/button11"
+                    android:layout_width="49dp"
+                    android:layout_height="46dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/usermanage"
+                    app:srcCompat="@drawable/usermanage" />
+
+                <TextView
+                    android:id="@+id/textsadasView8"
+                    android:layout_width="110dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Manage User"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="92dp"
+                android:layout_height="110dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/meddet"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/commentsuser"
+                    app:srcCompat="@drawable/commentsuser" />
+
+
+                <TextView
+                    android:id="@+id/textVithrew8"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Chat With HomeCare"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="350dp"
+            android:layout_height="157dp"
+            android:gravity="center"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:layout_width="92dp"
+                android:layout_height="110dp"
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/viemergencyalert"
+                    android:layout_width="54dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/viewemergency"
+                    app:srcCompat="@drawable/viewemergency" />
+
+                <TextView
+                    android:id="@+id/viewemer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="View Emergency"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="92dp"
+                android:layout_height="110dp"
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/button8"
+                    android:layout_width="54dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/logout"
+                    app:srcCompat="@drawable/logout" />
+
+                <TextView
+                    android:id="@+id/logoutuserviewtext"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="LOGOUT"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </TableRow>
+
+    </LinearLayout>
+
+
+</LinearLayout>
+

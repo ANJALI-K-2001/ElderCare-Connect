@@ -1,0 +1,38 @@
+
+
+
+{% include 'doctor_header.html' %}    
+
+<html>
+<center>
+    <table  border="2" class="table table-info" style="margin-top: 200px; width:1000px">
+        <tr>
+            <th>SL.NO</th>
+            <th>title</th>
+            <th>description</th>
+            <th>reply</th>
+            <th>date</th>
+            
+
+        </tr>
+
+        {%for i  in data['view']%}
+        <tr>
+        <td>{{loop.index}}</td>
+        <td>{{i['title']}}</td>
+        <td>{{i['description']}}</td> 
+        <td>{{i['reply']}}</td>
+        <td>{{i['date']}}</td>
+        
+      
+    </tr>
+    {%endfor%}
+    </table>
+</body>
+</center>
+</html>
+
+<br><br><br><br><br><br><br>
+
+{% include 'footer.html' %}
+

@@ -1,0 +1,91 @@
+
+{% include 'adminheader.html' %}    
+
+
+<br><br><br><br><br>
+
+  <!-- Content -->
+  <div class="container mt-5">
+    <h1 class="text-center mb-4">Verify Doctors</h1>
+    <div class="table-responsive">
+      <table class="table table-bordered table-hover">
+        <thead class="thead-dark">
+          <tr>
+            <th>SL.NO</th>
+            <th>Doctor Name</th>
+            <th>Qualification</th>
+            <th>Verify</th>
+          </tr>
+         
+        </thead>
+        <tbody>
+          
+          <!-- Table content goes here -->
+          {% for doctor in data['view'] %}
+          <tr>
+           
+            <td>{{ loop.index }}</td>
+            
+            <td>{{ doctor['doctor_name'] }}</td>
+            <td>{{ doctor['qualification'] }}</td>
+            <td>
+              <a href="?action=accept&id={{ doctor['login_id'] }}" class="btn btn-success">Accept</a>
+              <a href="?action=reject&id={{ doctor['login_id'] }}" class="btn btn-danger">Reject</a>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <!-- End Content -->
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+<style>
+  /* Add your custom styles here */
+
+.navbar-brand {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.table thead th {
+  font-weight: bold;
+}
+
+.btn {
+  margin-right: 5px;
+}
+
+.btn-success {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+  border-color: #bd2130;
+}
+
+</style>
+
+
+
+<br><br><br><br><br><br><br><br>
+
+{% include 'footer.html' %}

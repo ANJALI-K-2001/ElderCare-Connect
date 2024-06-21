@@ -1,0 +1,117 @@
+
+
+
+
+{% include 'home_care_header.html' %}
+
+
+<html>
+    <body>
+
+        <br></br><br><br><br><br><br>
+     <div class="container">
+            {%if data['up']%}
+            <center>
+            <form  method="post" enctype="multipart/form-data"> 
+                <table>
+
+            
+                <div class="form-group">
+                    <label for="full_name">FIRST NAME</label>
+                    <input type="text" id="fname" name="fname" value="{{data['up'][0]['fname']}}" required>
+                </div>
+                <div class="form-group">
+                    <label for="full_name">LAST NAME</label>
+                    <input type="text" id="lname" name="lname" value="{{data['up'][0]['lname']}}" required>
+                </div>
+        
+        
+                <div class="form-group">
+                    <label for="place">PLACE</label>
+                    <input type="text" id="place" name="place" value="{{data['up'][0]['place']}}"required>
+                </div>
+        
+                <div class="form-group">
+                    <label for="phone">PHONE</label>
+                    <input type="tel" id="phn" name="phone" value="{{data['up'][0]['phone']}}"required>
+                </div>
+                <div class="form-group">
+                    <label for="email">EMAIL</label>
+                    <input type="email" id="email" name="email" value="{{data['up'][0]['email']}}"required>
+                </div>
+                <div class="form-group">
+                    <label for="image"  style="margin-left: 100px;">IMAGE</label>
+                    <input type="file" id="img" name="image" value="{{data['up'][0]['image']}}" required>
+                </div>
+                <div class="form-group">
+                    <label for="idproof" style="margin-left: 100px;">ID PROFF</label>
+                    <input type="file" id="proof" name="idproof" value="{{data['up'][0]['license_proof']}}"required>
+                </div>
+                <div class="form-group">
+                    <label for="gender">GENDER</label>
+                    <input type="text" id="gender" name="gender" value="{{data['up'][0]['gender']}}"required>
+                </div>
+                
+                <div class="form-group">
+                    <input type="submit" name="update" value="update" class="btn btn-success ">
+                </div>
+            </table>
+            </form>
+        </center>
+        </div>
+{%else%}
+
+<br><br><br><br><br><br><br>
+
+<div style="text-align: center;">
+    {% if data['view'] %}
+        {% for i in data['view'] %}
+            <div class="card">
+                <img src="{{ i['image'] }}" alt="Profile Image" height="200px" width="200px">
+                <h2>{{ i['fname'] }} {{ i['lname'] }}</h2>
+                <p><strong>Place:</strong> {{ i['place'] }}</p>
+                <p><strong>Phone:</strong> {{ i['phone'] }}</p>
+                <p><strong>Email:</strong> {{ i['email'] }}</p>
+                <p><strong>Gender:</strong> {{ i['gender'] }}</p>
+                <a href="?action=update&id={{ i['homecare_id'] }}">Update Profile</a>
+            </div>
+        {% endfor %}
+    {% endif %}
+    {% endif %}
+
+</div>
+
+
+
+<style>
+    .card {
+        width: 300px; /* Adjust the width as needed */
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin: 20px;
+        padding: 20px;
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .card img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 4px;
+        margin-bottom: 10px;
+    }
+
+    .card h2 {
+        margin-top: 0;
+    }
+</style>
+
+
+</body>
+</html>
+
+
+<br></br><br><br><br><br><br>
+
+{% include 'footer.html' %}

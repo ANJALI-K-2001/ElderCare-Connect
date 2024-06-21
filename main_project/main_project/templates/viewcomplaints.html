@@ -1,0 +1,44 @@
+
+{% include 'adminheader.html' %}    
+
+
+<br><br><br><br><br>
+  <!-- Complaints Table -->
+  <div class="container mt-5">
+    <h1 class="text-center mb-4">View Complaints</h1>
+    <table class="table table-bordered table-hover">
+      <thead class="thead-dark">
+        <tr>
+          <th>SL.NO</th>
+          <th>Title</th>
+          <th>Description</th>
+          <th>Reply</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Table content goes here -->
+        {% for complaint in data['view'] %}
+        <tr>
+          <td>{{ loop.index }}</td>
+          <td>{{ complaint['title'] }}</td>
+          <td>{{ complaint['description'] }}</td>
+          <td>{{ complaint['reply'] }}</td>
+          <td>{{ complaint['date'] }}</td>
+          <td><a href="/adminsendreply?id={{ complaint['complaint_id'] }}" class="btn btn-success">Reply</a></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Include Bootstrap JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+<br><br><br><br><br>
+
+
+{% include 'footer.html' %}

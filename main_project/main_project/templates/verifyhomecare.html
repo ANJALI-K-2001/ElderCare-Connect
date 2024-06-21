@@ -1,0 +1,64 @@
+
+
+{% include 'adminheader.html' %}    
+
+
+<br><br><br><br><br>
+
+  <!-- Verify Homecare Table -->
+  <div class="container mt-5">
+    <h1 class="text-center mb-4">Verify Homecare</h1>
+    <div class="text-center"> <!-- Centering the table -->
+      <table class="table table-bordered table-hover table-sm d-inline-block">
+        <thead class="thead-dark">
+          <tr>
+            <th>SL.NO</th>
+            <th>Homecare ID</th>
+            <th>Login ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Place</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Image</th>
+            <th>idProof</th>
+            <th>Gender</th>
+            <th colspan="2">VERIFY</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for i in data['view'] %}
+          <tr>
+            <td>{{ loop.index }}</td>
+            <td>{{ i['homecare_id'] }}</td>
+            <td>{{ i['login_id'] }}</td>
+            <td>{{ i['fname'] }}</td>
+            <td>{{ i['lname'] }}</td>
+            <td>{{ i['place'] }}</td>
+            <td>{{ i['phone'] }}</td>
+            <td>{{ i['email'] }}</td>
+            <td>{{ i['image'] }}</td>
+            <td>{{ i['idproof'] }}</td>
+            <td>{{ i['gender'] }}</td>
+            <td><a href="?action=accept&id={{ i['homecare_id'] }}" class="btn btn-success">Accept</a></td>
+            <td><a href="?action=reject&id={{ i['homecare_id'] }}" class="btn btn-danger">Reject</a></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
+
+<br><br><br><br><br>
+
+
+{% include 'footer.html' %}
+

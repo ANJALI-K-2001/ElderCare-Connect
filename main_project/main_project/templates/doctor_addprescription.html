@@ -1,0 +1,48 @@
+
+{% include 'doctor_header.html' %}    
+
+<br><br><br><br><br>
+
+<!-- Main content -->
+<div class="container mt-5">
+  <form method="post">
+    <div class="form-group row">
+      <label for="prescription" class="col-sm-2 col-form-label">Add Prescription</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="prescription" name="prescription" required>
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="col-sm-10 offset-sm-2">
+        <input type="submit" name="reg" value="Submit" class="btn btn-primary">
+      </div>
+    </div>
+  </form>
+
+  <div class="container mt-5">
+    <h1 class="text-center mb-4">Add prescription</h1>
+    <table class="table table-bordered table-hover">
+      <thead class="thead-dark">
+      <tr>
+        <th>SL.NO</th>
+        <th>Prescription ID</th>
+        <th>Prescription Details</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for i in data['pre'] %}
+      <tr>
+        <td>{{ loop.index }}</td>
+        <td>{{ i['appointment_id'] }}</td>
+        <td>{{ i['prescription_details'] }}</td>
+        <td>{{ i['date'] }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+<br><br><br><br><br><br><br>
+
+{% include 'footer.html' %}

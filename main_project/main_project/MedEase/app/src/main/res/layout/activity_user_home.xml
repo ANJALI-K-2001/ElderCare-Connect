@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/homepageone"
+    tools:context=".User_Home">
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_marginTop="300dp"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="-150dp"
+        android:text="Homecare"
+        tools:layout_editor_absoluteX="137dp"
+        tools:layout_editor_absoluteY="148dp" />
+
+    <Button
+        android:id="@+id/sendcompl"
+        android:layout_marginLeft="140dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send Complaint" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_marginLeft="-150dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View Doctors" />
+
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_marginLeft="140dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View Appointment" />
+
+    <Button
+        android:id="@+id/button15"
+        android:layout_marginLeft="-120dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send Emergency Alert" />
+
+
+    <Button
+        android:id="@+id/button16"
+        android:layout_marginLeft="140dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View Transportation" />
+
+<!--    <Button-->
+<!--        android:id="@+id/userlogout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Logout" />-->
+
+
+
+    <LinearLayout
+        android:layout_width="92dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="-100dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/userlogout"
+            android:layout_width="54dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:src="@drawable/logout"
+            app:srcCompat="@drawable/logout" />
+
+        <TextView
+            android:id="@+id/logoutuseruserlogoutviewtext"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="LOGOUT"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

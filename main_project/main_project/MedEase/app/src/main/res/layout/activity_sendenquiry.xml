@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#cccccc"
+    tools:context=".Sendenquiry">
+
+
+    <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_marginTop="200dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="text"
+        android:textColor="@color/black"
+        android:textColorHint="#9A000000"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteX="99dp"
+        tools:layout_editor_absoluteY="162dp"
+        android:hint="Title" />
+
+    <EditText
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_marginTop="200dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="text"
+        android:textColor="@color/black"
+        android:textColorHint="#9A000000"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteX="99dp"
+        tools:layout_editor_absoluteY="162dp"
+        android:hint="Description" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button2"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/enqbutton"
+        android:text="Send" />
+
+    <ListView
+        android:id="@+id/viewenquiry"
+        android:layout_marginTop="300px"
+        android:dividerHeight="25dp"
+        android:divider="#cccccc"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </ListView>
+
+
+</LinearLayout>

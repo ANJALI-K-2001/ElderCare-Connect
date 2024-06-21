@@ -1,0 +1,61 @@
+
+{% include 'adminheader.html' %}    
+
+
+<br><br><br><br><br><br>
+  <!-- Verify Transportation Table -->
+  <div class="container mt-5">
+    <h1 class="text-center mb-4">Verify Transportation</h1>
+    <div class="text-center"> <!-- Centering the table -->
+      <table class="table table-bordered table-hover table-sm" style="font-size: 0.8rem;">
+        <thead class="thead-dark">
+          <tr>
+            <th>SL.NO</th>
+            <th>Transportation ID</th>
+            <th>Login ID</th>
+            <th>Full Name</th>
+            <th>Place</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Image</th>
+            <th>License Proof</th>
+            <th>Type of Vehicle</th>
+            <th>Vehicle Number</th>
+            <th colspan="2">VERIFY</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for i in data['view'] %}
+          <tr>
+            <td>{{ loop.index }}</td>
+            <td>{{ i['transportation_id'] }}</td>
+            <td>{{ i['login_id'] }}</td>
+            <td>{{ i['fullname'] }}</td>
+            <td>{{ i['place'] }}</td>
+            <td>{{ i['phone'] }}</td>
+            <td>{{ i['email'] }}</td>
+            <td>{{ i['image'] }}</td>
+            <td>{{ i['license_proof'] }}</td>
+            <td>{{ i['type_of_vehicle'] }}</td>
+            <td>{{ i['vehicle_number'] }}</td>
+            <td><a href="?action=accept&id={{ i['transportation_id'] }}" class="btn btn-success btn-sm">Accept</a></td>
+            <td><a href="?action=reject&id={{ i['transportation_id'] }}" class="btn btn-danger btn-sm">Reject</a></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
+
+
+<br><br><br><br><br><br><br><br>
+
+{% include 'footer.html' %}

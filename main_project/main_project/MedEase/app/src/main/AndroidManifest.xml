@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!-- <uses-permission android:maxSdkVersion="22" /> -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:enableOnBackInvokedCallback="true"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/eldercare"
+        android:label="ELDERCARE"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@drawable/eldercare"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MedEase"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity
+            android:name=".Send_Feedback"
+            android:exported="false" />
+
+        <activity
+            android:name=".User_send_request_transportation"
+            android:exported="false" />
+        <activity
+            android:name=".Viewtransportation"
+            android:exported="false" />
+
+        <activity
+            android:name=".User_send_emergency_alert"
+            android:exported="false" />
+        <activity
+            android:name=".User_send_request"
+            android:exported="false" />
+        <activity
+            android:name=".View_emergency_alert"
+            android:exported="false" />
+        <activity
+            android:name=".Payment"
+            android:exported="false" />
+        <activity
+            android:name=".User_chat"
+            android:exported="false" />
+        <activity
+            android:name=".User_Home"
+            android:exported="false" />
+        <activity
+            android:name=".Chat"
+            android:exported="false" />
+        <activity
+            android:name=".Notification"
+            android:exported="false" />
+        <activity
+            android:name=".Custimagetwo"
+            android:exported="false" />
+        <activity
+            android:name=".Setreminder"
+            android:exported="false" />
+        <activity
+            android:name=".Addmedicine"
+            android:exported="false" />
+        <activity
+            android:name=".View_prescription"
+            android:exported="false" />
+        <activity
+            android:name=".View_appointment_image"
+            android:exported="false" />
+        <activity
+            android:name=".Viewappointment"
+            android:exported="false" />
+        <activity
+            android:name=".Upload_images"
+            android:exported="false" />
+        <activity
+            android:name=".Makeappointment"
+            android:exported="false" />
+        <activity
+            android:name=".Viewdoctors"
+            android:exported="false" />
+        <activity
+            android:name=".Sendenquiry"
+            android:exported="false" />
+        <activity
+            android:name=".Viewmedicine"
+            android:exported="false" />
+        <activity
+            android:name=".Viewsymptoms"
+            android:exported="false" />
+        <activity
+            android:name=".Viewdisease"
+            android:exported="false" />
+        <activity
+            android:name=".Userregistration"
+            android:exported="false" />
+        <activity
+            android:name=".Home"
+            android:exported="false" />
+        <activity
+            android:name=".Login"
+            android:exported="false" />
+        <activity
+            android:name=".IpSetting"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name=".SocialDistanceAlert" />
+        <service android:name=".LocationService" />
+    </application>
+
+</manifest>

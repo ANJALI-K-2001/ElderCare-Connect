@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".Setreminder">
+
+
+    <EditText
+        android:id="@+id/editTextText11"
+        android:layout_width="match_parent"
+        android:textStyle="bold|italic"
+        android:ems="10"
+        android:focusableInTouchMode="false"
+        android:inputType="number"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:width="300dp"
+        android:textColor="@color/black"
+        android:drawablePadding="10dp"
+        android:background="@drawable/customtext"
+        android:paddingLeft="20dp"
+        android:textColorHint="@color/black"
+        tools:layout_editor_absoluteX="57dp"
+        tools:layout_editor_absoluteY="407dp" />
+
+    <EditText
+        android:id="@+id/editTextDate"
+        android:hint="Start Date"
+        android:layout_width="match_parent"
+        android:textStyle="bold|italic"
+        android:ems="10"
+        android:focusableInTouchMode="false"
+        android:inputType="number"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:width="300dp"
+        android:textColor="@color/black"
+        android:drawablePadding="10dp"
+        android:background="@drawable/customtext"
+        android:paddingLeft="20dp"
+        android:textColorHint="@color/black"
+        tools:layout_editor_absoluteX="57dp"
+        tools:layout_editor_absoluteY="407dp" />
+
+    <EditText
+        android:id="@+id/editTextDate2"
+        android:hint="End Date"
+        android:layout_width="match_parent"
+        android:textStyle="bold|italic"
+        android:ems="10"
+        android:focusableInTouchMode="false"
+        android:inputType="number"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:width="300dp"
+        android:textColor="@color/black"
+        android:drawablePadding="10dp"
+        android:background="@drawable/customtext"
+        android:paddingLeft="20dp"
+        android:textColorHint="@color/black"
+        tools:layout_editor_absoluteX="57dp"
+        tools:layout_editor_absoluteY="407dp" />
+
+    <EditText
+        android:id="@+id/editTextTime2"
+
+        android:hint="Time Morning"
+
+        android:layout_width="match_parent"
+        android:textStyle="bold|italic"
+        android:ems="10"
+        android:focusableInTouchMode="false"
+        android:inputType="number"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:width="300dp"
+        android:textColor="@color/black"
+        android:drawablePadding="10dp"
+        android:background="@drawable/customtext"
+        android:paddingLeft="20dp"
+        android:textColorHint="@color/black"
+        tools:layout_editor_absoluteX="57dp"
+        tools:layout_editor_absoluteY="407dp"/>
+
+    <EditText
+        android:id="@+id/editTextTime3"
+        android:hint="Time Afternoon"
+        android:layout_width="match_parent"
+        android:textStyle="bold|italic"
+        android:ems="10"
+        android:focusableInTouchMode="false"
+        android:inputType="number"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:width="300dp"
+        android:textColor="@color/black"
+        android:drawablePadding="10dp"
+        android:background="@drawable/customtext"
+        android:paddingLeft="20dp"
+        android:textColorHint="@color/black"
+        tools:layout_editor_absoluteX="57dp"
+        tools:layout_editor_absoluteY="407dp" />
+
+    <EditText
+        android:id="@+id/editTextTime4"
+
+        android:hint="Time Night"
+        android:layout_width="match_parent"
+        android:textStyle="bold|italic"
+        android:ems="10"
+        android:focusableInTouchMode="false"
+        android:inputType="number"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:width="300dp"
+        android:textColor="@color/black"
+        android:drawablePadding="10dp"
+        android:background="@drawable/customtext"
+        android:paddingLeft="20dp"
+        android:textColorHint="@color/black"
+        tools:layout_editor_absoluteX="57dp"
+        tools:layout_editor_absoluteY="407dp"
+        />
+
+    <Button
+        android:id="@+id/button13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="SET" />
+
+
+
+
+</LinearLayout>
+
+
+
+
+
+

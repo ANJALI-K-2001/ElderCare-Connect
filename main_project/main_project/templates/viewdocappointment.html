@@ -1,0 +1,53 @@
+{% include 'doctor_header.html' %}    
+
+
+<br><br><br><br><br>
+
+  <div class="container mt-5">
+    <h1 class="text-center mb-4">View Doc appointment</h1>
+    <table class="table table-bordered table-hover">
+      <thead class="thead-dark table table-info" >
+        <tr>
+            <th>sl no</th>
+            <th>Name</th>
+            <th>Reason</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Amount</th>
+            <th>Status</th>
+          
+            
+
+        </tr>
+    </thead>
+    <tbody>
+
+        {%for i  in data['view']%}
+        <tr>
+        <td>{{loop.index}}</td>
+        <td>{{i['fname']}}</td>
+        <td>{{i['reason']}}</td> 
+        <td>{{i['date']}}</td> 
+        <td>{{i['time']}}</td> 
+        <td>{{i['amount']}}</td>
+        <td>{{i['status']}}</td>
+        <td><a href="/docaddprescription?id={{i['appointment_id']}}" class="btn btn-success">Add Prescription</a></td>
+        </tr>
+        
+ 
+    
+    {%endfor%}
+</tbody>
+    </table>
+</div>
+ <!-- Include Bootstrap JS -->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
+<br><br><br><br><br>
+
+
+{% include 'footer.html' %}

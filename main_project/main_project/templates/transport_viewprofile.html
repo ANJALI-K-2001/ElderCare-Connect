@@ -1,0 +1,150 @@
+
+{% include 'transport_header.html' %}    
+
+
+
+<html>
+    <body>
+        <div class="container">
+        
+            {% if data['up'] %}
+            <center>
+                <form class="registration-form" method="post" style="margin-top: 100px;" enctype="multipart/form-data"> 
+                    <div class="form-group">
+                        <label for="full_name">Name</label>
+                        <input type="text" id="name" name="name" value="{{ data['up'][0]['fullname'] }}" required>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="place">Place</label>
+                        <input type="text" id="place" name="place" value="{{ data['up'][0]['place'] }}" required>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phn" name="phone" value="{{ data['up'][0]['phone'] }}" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" value="{{ data['up'][0]['email'] }}" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="image">Image</label>
+                        <input type="file" id="img" name="img" value="{{ data['up'][0]['image'] }}" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Licproof">License Proof</label>
+                        <input type="file" id="proof" name="proof" value="{{ data['up'][0]['license_proof'] }}" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="vehtype">Type of Vehicle</label>
+                        <input type="text" id="vehtype" name="vehtype" value="{{ data['up'][0]['type_of_vehicle'] }}" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="vehnum">Vehicle Number</label>
+                        <input type="text" id="vehnum" name="vehno" value="{{ data['up'][0]['vehicle_number'] }}" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" name="update" value="Update">
+                    </div>
+                </form>
+            </center> 
+           
+        </div>
+{%else%}
+        <center>
+
+    <table  border="2"  class="table table-info" style="margin-top: 200px; width:1000px">
+     
+        <tr>
+            <th>SL.NO</th>
+            <th>FULL<br> NAME</th>
+            <th>PLACE</th>
+            <th>PHONE</th>
+            <th>EMAIL</th>
+            <th>IMAGE</th>
+            <th>LICENSE PROOF</th>
+            <th>TYPE OF VEHICLE</th>
+            <th>VEHICLE NUMBER</th>
+            <th></th>
+    
+
+        </tr>
+
+        {%for i  in data['view']%}
+        <tr>
+        <td>{{loop.index}}</td>
+        <td>{{i['fullname']}}</td>
+        <td>{{i['place']}}</td>
+        <td>{{i['phone']}}</td>
+        <td>{{i['email']}}</td>
+        <td><img src="{{i['image']}}" alt="Image" height="200px" width="200px"></td>
+        <td><img src="{{i['license_proof']}}" alt="image" height="200px" width="200px"></td>
+        <td>{{i['type_of_vehicle']}}</td>
+        <td>{{i['vehicle_number']}}</td>
+        <td><a href="?action=update&id={{i['transportation_id']}}" class="btn btn-success">update profile</a></td>
+
+    </tr>
+    {%endfor%}
+    </table>
+
+{%endif%}
+</center>
+
+<br><br><br><br><br><br><br>
+
+<style>
+    .registration-form {
+    width: 80%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="tel"],
+.form-group input[type="email"],
+.form-group input[type="file"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-group input[type="submit"] {
+    width: auto;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-group input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.center {
+    text-align: center;
+}
+
+</style>
+</body>
+</html>
+
+
+{% include 'footer.html' %}
